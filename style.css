@@ -1,68 +1,138 @@
-/* Basic Styling */
+/* General body styling with a gradient background */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   padding: 20px;
   margin: 0;
-  background-color: #f0f0f0;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: #333;
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Center the main container with max-width and responsive design */
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Header styling */
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  color: #444;
   margin-bottom: 20px;
 }
 
+/* Quote container styling with box shadow and smooth transition */
 .quote-container {
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 30px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #333;
   margin-bottom: 20px;
   min-height: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Buttons */
+.quote-container:hover {
+  background-color: #f0f0f0;
+}
+
+/* Category selector and buttons */
+.category-selector {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* Buttons styling */
 button {
-  margin: 5px;
-  padding: 10px 15px;
-  font-size: 16px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #2575fc;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Theme Switch */
+button:hover {
+  background-color: #6a11cb;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Font size controls styling */
+.font-controls button {
+  background-color: #4caf50;
+}
+
+.font-controls button:hover {
+  background-color: #45a049;
+}
+
+/* Switch styling for dark mode */
 .theme-switch {
   margin-top: 20px;
 }
 
-/* Dark Mode */
+.theme-switch label {
+  font-size: 1.1em;
+  margin-right: 10px;
+  color: #666;
+}
+
+/* Dark mode styles */
 body.dark-mode {
-  background-color: #333;
-  color: #fff;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #eee;
+}
+
+body.dark-mode .container {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 body.dark-mode .quote-container {
-  background-color: #444;
-  color: #fff;
+  background-color: #333;
+  color: #ddd;
 }
 
-/* Mobile Friendly */
-@media (max-width: 600px) {
-  button {
-      padding: 8px 10px;
-  }
+body.dark-mode h1 {
+  color: #eee;
+}
 
+body.dark-mode button {
+  background-color: #444;
+  color: #ddd;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
   h1 {
-      font-size: 1.5em;
+      font-size: 2em;
   }
 
   .quote-container {
-      font-size: 14px;
+      font-size: 1.2em;
+  }
+
+  button {
+      padding: 10px 15px;
+      font-size: 0.9em;
   }
 }
